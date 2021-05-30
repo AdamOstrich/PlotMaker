@@ -1,0 +1,48 @@
+<MyGrid>
+    GridLayout:
+        spacing: 5
+        size: root.width-100, root.height-100
+        pos: 50, 50
+        cols: 1
+        #Image:
+        #    id: PlotImage
+        #    source: root
+        GridLayout:
+            spacing: 5
+            cols: 2
+            Label:
+                text: "Function: "
+            TextInput:
+                id: function_str
+            Label:
+                text: "Range: "
+            TextInput:
+                id: range_str
+
+        GridLayout:
+            spacing: 5
+            cols: 6
+            Label:
+                text: "Titule: "
+            TextInput:
+                id: titule
+            Label:
+                text: "X-axis: "
+            TextInput:
+                id: x_axis
+            Label:
+                text: "y_axis: "
+            TextInput:
+                id: y_axis:
+
+        GridLayout:
+            spacing: 5
+            cols: 3
+            Label:
+                text: "Legend?"
+            CheckBox:
+                id: legend
+                #legend = False
+            Button:
+                text: "Submit"
+                on_press: root.calculate()
