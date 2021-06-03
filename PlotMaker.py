@@ -8,12 +8,23 @@ from kivy.properties import ObjectProperty
 from kivy.uix.image import Image
 from kivy.uix.checkbox import CheckBox
 from kivy.config import Config
-Config.set('graphics', 'width', '800')
-Config.set('graphics', 'height', '500')
+Config.set('graphics', 'width', '1000')
+Config.set('graphics', 'height', '700')
 
 class MyGrid(Widget):
+    function_str = ObjectProperty(str)
+    start_range = ObjectProperty(float)
+    end_range = ObjectProperty(float)
+    #function_str = ""
+
     def calculate(self):
-        pass
+        print(self.function_str.text)
+
+    def write_function(self, value):
+        self.function_str.text += value
+        print(self.function_str.text)
+
+
 
 class MyApp(App):
     def build(self):
