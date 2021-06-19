@@ -2,6 +2,10 @@
     function_str: function_str
     start_range: start_range
     end_range: end_range
+    x_axis: x_axis
+    y_axis: y_axis
+    title: title
+    legend: legend
     GridLayout:
         spacing: 10
         size: root.width-100, root.height-100
@@ -91,15 +95,15 @@
                     on_press: root.write_function("+")
                 Button:
                     text: chr(8730)
-                    on_press: root.write_function(chr(8730))
+                    on_press: root.write_function(chr(8730)+"()")
 
             GridLayout:
                 cols: 2
                 spacing: 3
                 Label:
-                    text: "Titule: "
+                    text: "Title: "
                 TextInput:
-                    id: titul
+                    id: title
                 Label:
                     text: "Range: "
                 GridLayout:
@@ -115,7 +119,7 @@
                 Label:
                     text: "Y-axis: "
                 TextInput:
-                    id: y_axis:
+                    id: y_axis
 
                 GridLayout:
                     cols: 2
@@ -127,3 +131,11 @@
                 Button:
                     text: "Submit"
                     on_press: root.calculate()
+
+<Picture>:
+    GridLayout:
+        cols: 1
+        rows: 1
+        Image:
+            id: image
+            source: root.root
