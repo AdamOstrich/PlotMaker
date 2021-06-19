@@ -11,10 +11,6 @@
         size: root.width-100, root.height-100
         pos: 50, 50
         cols: 1
-        #Image:
-        #    id: PlotImage
-        #    source: root
-        #    size: 1000, 300
         TextInput:
             id: function_str
             text: function_str.text
@@ -135,7 +131,8 @@
 <Picture>:
     GridLayout:
         cols: 1
-        rows: 1
+        size: root.width, root.height
+        pos: 260, 100
         Image:
             id: image
             source: root.root

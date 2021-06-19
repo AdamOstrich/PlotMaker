@@ -14,9 +14,6 @@ Config.set('graphics', 'width', '1000')
 Config.set('graphics', 'height', '700')
 
 class Picture(Widget):
-    pass
-
-class MyPlot(Picture):
     root = "wykres.jpg"
 
 class MyGrid(Widget):
@@ -85,11 +82,11 @@ class MyApp(App):
         return MyGrid()
 
 def show_plot():
-    print("inside show_plot")
+    #print("inside show_plot")
     show = Picture()
-    print("inside show_plot")
-    popupWindow = Popup(title="Plot", content=show, size_hint=(None, None), size=(500, 350))
-    print("inside show_plot")
+    #print("inside show_plot")
+    popupWindow = Popup(title="Plot", content=show, size_hint=(None, None), size=(500, 500))
+    #print("inside show_plot")
     popupWindow.open()
 
 
